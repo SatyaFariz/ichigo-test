@@ -42,7 +42,7 @@ app.get('/users/:id/rewards', async (req, res) => {
       userId: newUser.id,
       availableAt: dateString,
       redeemedAt: null,
-      expiresAt: getNextDate(new Date(dateString))
+      expiresAt: getNextDate(new Date(dateString)).toISOString()
     }
   })
 
